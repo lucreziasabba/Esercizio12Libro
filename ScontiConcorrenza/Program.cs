@@ -20,7 +20,8 @@ namespace ScontiConcorrenza
             }
             else if (importo > 300)
             {
-                sconto = (importo / 100) * 20;
+                double importoOltre300 = importo - 300;
+                sconto = (importoOltre300 / 100) * 20 +30;
                 importo_scontato = importo - sconto;
                 Console.WriteLine("Lo sconto è di: " + sconto);
                 Console.WriteLine("L'importo è di: " + importo_scontato);
